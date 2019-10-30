@@ -2,7 +2,7 @@
 	"name": "Daily Trigger",
 	"properties": {
 		"annotations": [],
-		"runtimeState": "Stopped",
+		"runtimeState": "Started",
 		"pipelines": [
 			{
 				"pipelineReference": {
@@ -321,24 +321,13 @@
 						},
 						{
 							"source": {
-								"tableName": "\"public\".\"core_gateway\""
+								"tableName": "\"public\".\"core_accessnetwork\""
 							},
 							"destination": {
-								"fileName": "public.core_gateway.txt"
+								"fileName": "public.core_accessnetwork.txt"
 							},
 							"copySource": {
-								"query": "select * from \"public\".\"core_gateway\""
-							}
-						},
-						{
-							"source": {
-								"tableName": "\"public\".\"core_gatewaytype\""
-							},
-							"destination": {
-								"fileName": "public.core_gatewaytype.txt"
-							},
-							"copySource": {
-								"query": "select * from \"public\".\"core_gatewaytype\""
+								"query": "select * from \"public\".\"core_accessnetwork\""
 							}
 						},
 						{
@@ -438,17 +427,6 @@
 							},
 							"copySource": {
 								"query": "select * from \"public\".\"core_transceivertype_command_types\""
-							}
-						},
-						{
-							"source": {
-								"tableName": "\"public\".\"core_transceivertype_supported_gateways\""
-							},
-							"destination": {
-								"fileName": "public.core_transceivertype_supported_gateways.txt"
-							},
-							"copySource": {
-								"query": "select * from \"public\".\"core_transceivertype_supported_gateways\""
 							}
 						},
 						{
@@ -845,7 +823,7 @@
 			"recurrence": {
 				"frequency": "Day",
 				"interval": 1,
-				"startTime": "2019-07-16T05:52:00Z",
+				"startTime": "2019-07-16T05:52:00.000Z",
 				"timeZone": "UTC",
 				"schedule": {
 					"minutes": [
